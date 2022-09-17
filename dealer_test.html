@@ -1,0 +1,2265 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Dealer Page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		body {
+			 margin: 0px;
+			 padding: 0;
+			 padding-bottom: 0;
+
+
+
+        /*pacity: 0.6;*/
+			 
+			/* opacity: 0.25; /*Value from 0.0 to 1.0*/
+			 
+
+
+
+		}
+		.baner1{
+				 background-image: url("image/image1.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: auto;
+            height: 100vh;
+
+
+			
+		}
+		
+
+		h1{
+			font-size: 87px;
+
+margin: 0 10px;
+padding: 0;
+margin-left: -31%;
+margin-top: -8%;
+		}
+		h3{
+			font-size: 35px;
+			margin-right: 400px;
+		}
+		input[type="submit"]{
+  width: 50%;
+  height: 50px;
+  border: 1px solid;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  margin-left:-700px;
+}
+		input[type="submit"]:hover{
+  border-color: black;
+  transition: .5s;
+  background-color: white;
+}
+.about {
+	font-size: 20px;
+	text-align: justify;
+  line-height: 2;
+}
+.field{
+	
+	margin-left: 20%;
+
+}
+
+
+.align{
+	margin-bottom: 10px;
+}
+.link{
+	color: rebeccapurple;
+}
+
+
+
+                                                 /*MEDIA QUERIE*/
+
+
+@media screen and (max-width: 375px){
+
+
+
+  .about2{
+  font-size:18px ;
+  line-height: 1px;
+}
+
+
+.about {
+  font-size: 14px;
+  text-align: justify;
+  line-height: 2;
+}
+
+    h1{
+      font-size: 50px;
+
+margin: 0 10px;
+padding: 0;
+margin-left: 3%;
+margin-top: -10%;
+}
+
+
+h3{
+      font-size: 20px;
+      margin-right: 10px;
+    }
+    input[type="submit"]{
+  width: 70%;
+  height: 40px;
+  border: 1px solid;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  margin-left:-70px;
+
+}
+    input[type="submit"]:hover{
+  border-color: black;
+  transition: .5s;
+}
+/* .about {
+  font-size:10px;
+  margin-left: 80px;
+} */
+.field{
+  
+  margin-left: 20%;
+
+}
+
+
+.align{
+  margin-bottom: 10px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* .container {
+  padding-right: 15px;
+  padding-left: 100px;
+  margin-right: auto;
+  margin-left: auto;
+} */
+
+.column{
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/*-- contact-section --*/
+.contact{
+	  /*background: #e8eaed;*/
+	padding:6em 0em;
+	overflow: hidden;
+}
+.contact h3{
+  font-size: 50px;
+  font-weight: 400;
+  color: black;
+  text-transform: uppercase;
+  margin: 0 auto;
+  border-bottom: 2px solid white;
+  width: 400px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  
+}
+/*.contact p{
+	font-size:1.2em;
+	font-weight:400;
+	color: #e8eaed;
+	color: white;
+	margin:1em 0em 4em;
+	text-align:center;
+}
+*/
+
+/*.lbl{
+	  width: 100%;
+  padding: 1.5% 0;
+  margin-bottom: 7%;
+  background: none;
+  color: black;
+  font-size: 18px;
+  outline: none;
+  font-weight: 400;
+  text-indent: 10px;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 0.4rem 0.2rem;
+  font-size: inherit;
+  color: black;
+  outline: none;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid silver;
+  font-family: inherit;
+  line-height: 4.5;
+}
+
+.input-box label {
+  color: silver;
+  position: absolute;
+  top: 30%;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label {
+  top: -20px;
+  color: green;
+  font-size: 12px;
+  background-color: #c9d6cd;
+  padding: 2px 5px;
+}
+
+
+
+.submit-button {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 0.6rem 1.2rem;
+  color: green;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  overflow: hidden;
+  border: none;
+  transition: 0.5s;
+  margin-top: 3rem;
+  letter-spacing: 2px;
+  background-color: white;
+  width: 150%;
+  margin-left: -120px;
+}
+
+.submit-button:hover {
+  background: #72ed93;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 25px #72ed93;
+}
+
+.submit-button span {
+  position: absolute;
+  display: block;
+}
+
+.submit-button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #0bd641);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.submit-button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, #c9d6cd);
+  animation: btn-anim2 1s linear infinite 0.25s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.submit-button span:nth-child(3) {
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  right: -100%;
+  background: linear-gradient(to left, transparent, #07e834);
+  animation: btn-anim3 1s linear infinite 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.submit-button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to top, transparent, green);
+  animation: btn-anim4 1s linear infinite 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+.input-class .input, .msg textarea{
+    margin: 10px 0;
+    background: transparent;
+    border-color: silver;
+    
+    padding: 10px;
+    color: black;
+    width: 150%;
+    margin-top: 20%;
+    margin-left: -50%;
+}
+.msg textarea{
+    height: 300px;
+}
+::-webkit-input-placeholder{
+    color: silver;
+}
+::-moz-input-placeholder{
+    color: silver;
+}
+/*@media screen and (max-width: 600px){
+    .contact-fome{
+        flex-direction: column;
+    }
+    .msg text-area{
+        height: 100px;
+    }
+    .input-class, .msg{
+        width: 100%;
+    }
+}
+*/
+
+
+@media screen and (max-width: 1440px){
+
+
+.banner1 {
+    width: 100%;
+    height: 967px;
+     background-image: url("image/image1.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px){
+
+
+.banner1 {
+    width: 100%;
+    height: 773px;
+     background-image: url("image/image1.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px){
+
+
+.banner1 {
+    width: 100%;
+    height: 773px;
+     background-image: url("image/image1.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+
+  h1{
+      font-size: 127px;
+
+margin: 0 10px;
+padding: 0;
+margin-left: 1%;
+margin-top: -10%;
+}
+
+
+h3{
+      font-size: 35px;
+      margin-right: 10px;
+    }
+    input[type="submit"]{
+  width: 54%;
+  height: 40px;
+  border: 1px solid;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  margin-left:-238px;
+
+}
+    input[type="submit"]:hover{
+  border-color: black;
+  transition: .5s;
+}
+/* .about {
+  font-size:10px;
+  margin-left: 80px;
+} */
+.field{
+  
+  margin-left: 20%;
+
+}
+
+
+.align{
+  margin-bottom: 10px;
+}
+.contact{
+    /*background: #e8eaed;*/
+  padding:6em 0em;
+  overflow: hidden;
+}
+.contact h3{
+  font-size: 42px;
+  font-weight: 400;
+  color: black;
+  text-transform: uppercase;
+  margin: 0 auto;
+  border-bottom: 2px solid white;
+  width: 310px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+ 
+}
+.contact p{
+  font-size:1.2em;
+  font-weight:400;
+  /*color: #e8eaed;*/
+  color: white;
+  margin:1em 0em 4em;
+  text-align:center;
+}
+
+
+/*.lbl{
+    width: 100%;
+  padding: 1.5% 0;
+  margin-bottom: 7%;
+  background: none;
+  color: black;
+  font-size: 18px;
+  outline: none;
+  font-weight: 400;
+  text-indent: 10px;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 0.4rem 0.2rem;
+  font-size: inherit;
+  color: black;
+  outline: none;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid silver;
+  font-family: inherit;
+  /* margin-left: -20%; */
+}
+
+.input-box label {
+  color: silver;
+  position: absolute;
+  top: 30%;
+  pointer-events: none;
+  transition: 0.5s;
+  /* margin-left: -20%; */
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label {
+  top: -20px;
+  color: green;
+  font-size: 12px;
+  background-color: #c9d6cd;
+  padding: 2px 5px;
+}
+
+
+
+.submit-button {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 0.6rem 1.2rem;
+  color: green;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  overflow: hidden;
+  border: none;
+  transition: 0.5s;
+  margin-top: 3rem;
+  letter-spacing: 2px;
+  background-color: white;
+  width: 200%;
+  margin-left: -85px;
+}
+
+.submit-button:hover {
+  background: #72ed93;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 25px #72ed93;
+}
+
+.submit-button span {
+  position: absolute;
+  display: block;
+}
+
+.submit-button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #0bd641);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.submit-button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, #c9d6cd);
+  animation: btn-anim2 1s linear infinite 0.25s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.submit-button span:nth-child(3) {
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  right: -100%;
+  background: linear-gradient(to left, transparent, #07e834);
+  animation: btn-anim3 1s linear infinite 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.submit-button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to top, transparent, green);
+  animation: btn-anim4 1s linear infinite 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+.input-class .input, .msg textarea{
+    margin: 10px 0;
+    background: transparent;
+    border-color: silver;
+    
+    padding: 10px;
+    color: black;
+    width: 200%;
+    margin-left: -43%;
+
+}
+.msg textarea{
+    height: 333px;
+}
+::-webkit-input-placeholder{
+    color: silver;
+}
+::-moz-input-placeholder{
+    color: silver;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px){
+
+
+
+  h1{
+      font-size: 87px;
+
+margin: 0 10px;
+padding: 0;
+margin-left: 1%;
+margin-top: -10%;
+}
+
+
+h3{
+      font-size: 23px;
+      margin-right: 10px;
+    }
+    input[type="submit"]{
+  width: 56%;
+  height: 40px;
+  border: 1px solid;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  margin-left:-154px;
+
+}
+    input[type="submit"]:hover{
+  border-color: black;
+  transition: .5s;
+}
+/* .about {
+  font-size:10px;
+  margin-left: 80px;
+} */
+.field{
+  
+  margin-left: 20%;
+
+}
+
+
+.align{
+  margin-bottom: 10px;
+}
+.contact{
+    /*background: #e8eaed;*/
+  padding:6em 0em;
+  overflow: hidden;
+}
+.contact h3{
+  font-size: 42px;
+  font-weight: 400;
+  color: black;
+  text-transform: uppercase;
+  margin: 0 auto;
+  border-bottom: 2px solid white;
+  width: 310px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+ 
+}
+.contact p{
+  font-size:1.2em;
+  font-weight:400;
+  /*color: #e8eaed;*/
+  color: white;
+  margin:1em 0em 4em;
+  text-align:center;
+}
+
+
+/*.lbl{
+    width: 100%;
+  padding: 1.5% 0;
+  margin-bottom: 7%;
+  background: none;
+  color: black;
+  font-size: 18px;
+  outline: none;
+  font-weight: 400;
+  text-indent: 10px;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 0.4rem 0.2rem;
+  font-size: inherit;
+  color: black;
+  outline: none;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid silver;
+  font-family: inherit;
+  /* margin-left: -20%; */
+}
+
+.input-box label {
+  color: silver;
+  position: absolute;
+  top: 30%;
+  pointer-events: none;
+  transition: 0.5s;
+  /* margin-left: -20%; */
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label {
+  top: -20px;
+  color: green;
+  font-size: 12px;
+  background-color: #c9d6cd;
+  padding: 2px 5px;
+}
+
+
+
+.submit-button {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 0.6rem 1.2rem;
+  color: green;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  overflow: hidden;
+  border: none;
+  transition: 0.5s;
+  margin-top: 3rem;
+  letter-spacing: 2px;
+  background-color: white;
+  width: 200%;
+  margin-left: -133px;
+}
+
+.submit-button:hover {
+  background: #72ed93;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 25px #72ed93;
+}
+
+.submit-button span {
+  position: absolute;
+  display: block;
+}
+
+.submit-button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #0bd641);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.submit-button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, #c9d6cd);
+  animation: btn-anim2 1s linear infinite 0.25s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.submit-button span:nth-child(3) {
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  right: -100%;
+  background: linear-gradient(to left, transparent, #07e834);
+  animation: btn-anim3 1s linear infinite 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.submit-button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to top, transparent, green);
+  animation: btn-anim4 1s linear infinite 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+.input-class .input, .msg textarea{
+    margin: 10px 0;
+    background: transparent;
+    border-color: silver;
+    
+    padding: 10px;
+    color: black;
+    width: 200%;
+    margin-left: -43%;
+}
+.msg textarea{
+    height: 268px;
+}
+::-webkit-input-placeholder{
+    color: silver;
+}
+::-moz-input-placeholder{
+    color: silver;
+}
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 425px){
+
+.about2{
+  font-size:20px ;
+  line-height: 1px;
+}
+
+
+.about {
+  font-size: 16px;
+  text-align: justify;
+  line-height: 2;
+}
+
+  h1{
+      font-size: 50px;
+
+margin: 0 10px;
+padding: 0;
+margin-left: 3%;
+margin-top: -10%;
+}
+
+
+h3{
+      font-size: 20px;
+      margin-right: 10px;
+    }
+    input[type="submit"]{
+  width: 70%;
+  height: 40px;
+  border: 1px solid;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  margin-left:-70px;
+
+}
+    input[type="submit"]:hover{
+  border-color: black;
+  transition: .5s;
+}
+/* .about {
+  font-size:10px;
+  margin-left: 80px;
+} */
+.field{
+  
+  margin-left: 20%;
+
+}
+
+
+.align{
+  margin-bottom: 10px;
+}
+.contact{
+    /*background: #e8eaed;*/
+  padding:6em 0em;
+  overflow: hidden;
+}
+.contact h3{
+  font-size: 42px;
+  font-weight: 400;
+  color: black;
+  text-transform: uppercase;
+  margin: 0 auto;
+  border-bottom: 2px solid white;
+  width: 310px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  
+}
+.contact p{
+  font-size:1.2em;
+  font-weight:400;
+  /*color: #e8eaed;*/
+  color: white;
+  margin:1em 0em 4em;
+  text-align:center;
+}
+
+
+/*.lbl{
+    width: 100%;
+  padding: 1.5% 0;
+  margin-bottom: 7%;
+  background: none;
+  color: black;
+  font-size: 18px;
+  outline: none;
+  font-weight: 400;
+  text-indent: 10px;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 0.4rem 0.2rem;
+  font-size: inherit;
+  color: black;
+  outline: none;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid silver;
+  font-family: inherit;
+  /* margin-left: -85%; */
+}
+
+.input-box label {
+  color: silver;
+  position: absolute;
+  top: 30%;
+  pointer-events: none;
+  transition: 0.5s;
+  /* margin-left: -85%; */
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label {
+  top: -20px;
+  color: green;
+  font-size: 12px;
+  background-color: #c9d6cd;
+  padding: 2px 5px;
+}
+
+
+
+.submit-button {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 0.6rem 1.2rem;
+  color: green;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  overflow: hidden;
+  border: none;
+  transition: 0.5s;
+  margin-top: 3rem;
+  letter-spacing: 2px;
+  background-color: white;
+  width: 389%;
+  /* margin-left: -169px; */
+}
+
+.submit-button:hover {
+  background: #72ed93;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 25px #72ed93;
+}
+
+.submit-button span {
+  position: absolute;
+  display: block;
+}
+
+.submit-button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #0bd641);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.submit-button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, #c9d6cd);
+  animation: btn-anim2 1s linear infinite 0.25s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.submit-button span:nth-child(3) {
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  right: -100%;
+  background: linear-gradient(to left, transparent, #07e834);
+  animation: btn-anim3 1s linear infinite 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.submit-button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to top, transparent, green);
+  animation: btn-anim4 1s linear infinite 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+.input-class .input, .msg textarea{
+    margin: 10px 0;
+    background: transparent;
+    border-color: silver;
+    
+    padding: 10px;
+    color: black;
+    width: 385%;
+    margin-left: -178%;
+}
+.msg textarea{
+    height: 268px;
+}
+::-webkit-input-placeholder{
+    color: silver;
+}
+::-moz-input-placeholder{
+    color: silver;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media screen and (max-width: 375px){ */
+.contact{
+    /*background: #e8eaed;*/
+  padding:6em 0em;
+  overflow: hidden;
+}
+
+.contact h3{
+  font-size: 42px;
+  font-weight: 400;
+  color: black;
+  text-transform: uppercase;
+  margin: 0 auto;
+  border-bottom: 2px solid white;
+  width: 310px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  
+}
+.contact p{
+  font-size:1.2em;
+  font-weight:400;
+  /*color: #e8eaed;*/
+  color: white;
+  margin:1em 0em 4em;
+  text-align:center;
+}
+
+
+/*.lbl{
+    width: 100%;
+  padding: 1.5% 0;
+  margin-bottom: 7%;
+  background: none;
+  color: black;
+  font-size: 18px;
+  outline: none;
+  font-weight: 400;
+  text-indent: 10px;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 0.4rem 0.2rem;
+  font-size: inherit;
+  color: black;
+  outline: none;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid silver;
+  font-family: inherit;
+  /* margin-left: -115%; */
+}
+
+.input-box label {
+  color: silver;
+  position: absolute;
+  top: 30%;
+  pointer-events: none;
+  transition: 0.5s;
+  /* margin-left: -115%; */
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label {
+  top: -20px;
+  color: green;
+  font-size: 12px;
+  background-color: #c9d6cd;
+  padding: 2px 5px;
+}
+
+
+
+.submit-button {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 0.6rem 1.2rem;
+  color: green;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  overflow: hidden;
+  border: none;
+  transition: 0.5s;
+  margin-top: 3rem;
+  letter-spacing: 2px;
+  background-color: white;
+  width: 100%;
+
+}
+
+.submit-button:hover {
+  background: #72ed93;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 25px #72ed93;
+}
+
+.submit-button span {
+  position: absolute;
+  display: block;
+}
+
+.submit-button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #0bd641);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.submit-button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, #c9d6cd);
+  animation: btn-anim2 1s linear infinite 0.25s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.submit-button span:nth-child(3) {
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  right: -100%;
+  background: linear-gradient(to left, transparent, #07e834);
+  animation: btn-anim3 1s linear infinite 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.submit-button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to top, transparent, green);
+  animation: btn-anim4 1s linear infinite 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+.input-class .input, .msg textarea{
+    margin: 10px 0;
+    background: transparent;
+    border-color: silver;
+    
+    padding: 10px;
+    color: black;
+    width: 100%;
+   
+}
+.msg textarea{
+    height: 331px;
+}
+::-webkit-input-placeholder{
+    color: silver;
+}
+::-moz-input-placeholder{
+    color: silver;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 320px){
+
+.about2{
+  font-size:19px ;
+  line-height: 1px;
+}
+h3{
+  font-size: 19px;
+}
+  .about {
+  font-size: 14px;
+  text-align: justify;
+  line-height: 2;
+}
+.contact{
+    /*background: #e8eaed;*/
+  padding:6em 0em;
+  overflow: hidden;
+}
+.contact h3{
+  font-size: 42px;
+  font-weight: 400;
+  color: black;
+  text-transform: uppercase;
+  margin: 0 auto;
+  border-bottom: 2px solid white;
+  width: 310px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  
+}
+.contact p{
+  font-size:1.2em;
+  font-weight:400;
+  /*color: #e8eaed;*/
+  color: white;
+  margin:1em 0em 4em;
+  text-align:center;
+}
+
+
+/*.lbl{
+    width: 100%;
+  padding: 1.5% 0;
+  margin-bottom: 7%;
+  background: none;
+  color: black;
+  font-size: 18px;
+  outline: none;
+  font-weight: 400;
+  text-indent: 10px;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 0.4rem 0.2rem;
+  font-size: inherit;
+  color: black;
+  outline: none;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid silver;
+  font-family: inherit;
+  /* margin-left: -180%; */
+}
+
+.input-box label {
+  color: silver;
+  position: absolute;
+  top: 30%;
+  pointer-events: none;
+  transition: 0.5s;
+  /* margin-left: -180%; */
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label {
+  top: -20px;
+  color: green;
+  font-size: 12px;
+  background-color: #c9d6cd;
+  padding: 2px 5px;
+}
+
+
+
+.submit-button {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 0.6rem 1.2rem;
+  color: green;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  overflow: hidden;
+  border: none;
+  transition: 0.5s;
+  margin-top: 3rem;
+  letter-spacing: 2px;
+  background-color: white;
+  width: 100%;
+  
+}
+
+.submit-button:hover {
+  background: #72ed93;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 25px #72ed93;
+}
+
+.submit-button span {
+  position: absolute;
+  display: block;
+}
+
+.submit-button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #0bd641);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.submit-button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, #c9d6cd);
+  animation: btn-anim2 1s linear infinite 0.25s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.submit-button span:nth-child(3) {
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  right: -100%;
+  background: linear-gradient(to left, transparent, #07e834);
+  animation: btn-anim3 1s linear infinite 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.submit-button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to top, transparent, green);
+  animation: btn-anim4 1s linear infinite 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+.input-class .input, .msg textarea{
+    margin: 10px 0;
+    background: transparent;
+    border-color: silver;
+    
+    padding: 10px;
+    color: black;
+    width: 100%;
+    
+}
+.msg textarea{
+    height: 268px;
+}
+::-webkit-input-placeholder{
+    color: silver;
+}
+::-moz-input-placeholder{
+    color: silver;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px){
+    .contact-fome{
+        flex-direction: column;
+    }
+    .msg text-area{
+        height: 100px;
+    }
+    .input-class, .msg{
+        width: 100%;
+    }
+}
+
+}
+/* 
+
+@media screen (max-width: 375px){
+	.baner h1{
+			font-size: 20px;
+
+margin: 0 10px;
+padding: 0;
+
+		}
+
+}
+ */
+
+
+
+
+.banner1 {
+  width: 100%;
+  height: 700px;
+     background-image: url("image/image1.jpg");
+  /* 1st-#444b4679, #2a3d3800 tried-2nd-#1b221d79, #6c726b52*/
+  background-position: center center;
+  background-size: cover;
+}
+	</style>
+
+
+</head>
+<body>
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-15">
+                <div class="banner1"style="text-align:center; padding-top: 150px;">
+                	<h1 class="align">JOIN HANDS WITH US</h1>
+	                <br><br><br><br>
+	                <h3>Min-Zharge will help you to sell electric vehicles</h3>
+	                <br><br><br><br><br><br><br>
+	
+                    <div class="field">
+	<input  type="submit" value="Be Min-Zhargers">
+
+
+
+	<br><br><br><br><br>
+	                 </div>
+                 </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+<!--	<div class="baner">-->
+		<!-- <div class="baner1">
+
+	<h1 class="align">WORK WITH US </h1>
+	<br><br><br><br>
+	<h3><label class="link">Minzharge.com</label> will help you to sell electric vehicles</h3>
+	<br><br><br><br><br><br><br>
+	
+<div class="field">
+	<input  type="submit" value="Become A Minzharge Dealer">
+
+
+
+	<br><br><br><br><br>
+	</div>
+</div> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+	<div class="about">
+</p>
+		<p><b  >We know there’s an educational component to selling electric vehicles. That’s what we’re here to solve and ultimately pass on to you.</b></p>
+    <div class="spacing">
+<p>We have a dedicated staff of electric vehicle experts on standby ready to guide your customers through the buying process and answer any EV-related questions.</p>
+
+</div>
+<p><b  >What does that mean for you?</b></p>
+<div class="spacing">
+<p>It means you will have highly educated and informed customers walking into your store. Our partners say our leads are easier to work with and are three times more likely to close than a traditional third-party lead.</p>
+<p>Min-Zharge is dedicated specifically to electric vehicles. We help you to increase your sales and develop your business to the next stage.</p>
+<p>Being in this small but growing niche allows us to curate a very special audience with a very unique interest in electric vehicles. </p>
+<p>Gain a unique advantage over your competitors with us on your side and take advantage of our extensive knowledge and EV-specific marketing abilities.</p>
+</div>
+<p><b  >Let us worry about educating, so you can focus on selling.</b></p>
+<p><b>How Min-Zharge works?</b></p>
+<p>We have our own platform where your products will be displayed for users’ viewing. You will receive the details of customers who are interested in the product, and we are going up ahead where our Min-Sales force will help in converting this enquiry into booking. </p>
+<p>It can be manufacturers, distributors, dealers, retail sellers, etc.,</p>
+<p><b>Who all can be part of Min-Zharge?</b></p>
+<p>Min-Zharge is purely focusing on Electric Mobility. If you are a manufacturer, distributor, dealer, or retail seller of the products like Electric Cycles, Two wheelers, Three wheelers, Four wheelers, Electric Loaders, Application-oriented Electric Vehicles, Charging station, batteries, Spares, accessories etc.,</p>
+<p><b>How to Join Min-Zharge?</b></p>
+<p>Just click the “Be Min-Zhargers” button. Fill out the form and good to go. Our team will take care of the remaining procedure and we will add you as an honorable customer of Min-Zharge.</p>
+<p><b>How Safe is our platform?</b></p>
+<p>We focus on safety and security as our main priority. We follow all government standards and safeguard our customer details without leaking outside. Our technical team is working day and night to manage all our user’s and customers’ data to not reach other hands. So, you can trust us when it comes to information safety.</p>
+
+
+  </div>
+    </div>
+  </div>
+
+</div>
+
+
+	</div>
+
+
+
+
+<div class="contact" id="contact">
+      <div class="container">
+      <h3 class="us">Contact us</h3>
+      <br><br><br>
+      <!-- <p>if you have any question, please contact us:)</p>
+       -->  
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="input-box">
+        <input type="text" id="username" required>
+        <label for="username">Dealer page</label>
+      </div>
+      <div class="input-box">
+        <input type="text" id="password" required>
+        <label for="password">First Name</label>
+      </div>
+      <div class="input-box">
+        <input type="text" id="password" required>
+        <label for="password">Last Name</label>
+      </div>
+      
+      <div class="input-box">
+        <input type="text" id="password" required>
+        <label for="password">Email</label>
+      </div>
+      <div class="input-box">
+        <input type="number" id="password" required>
+        <label for="password">Phone</label>
+      </div>
+      
+      
+    </div>
+    <div class="col-md-6">
+      <div class="msg">
+            <textarea placeholder="How can we help you ?"></textarea>
+             <button class="submit-button">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Submit
+      </button>
+    
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+        
+
+    </div>
+  </div>
+</div>
+       <!-- <div class="input-box">
+        <input type="text" id="username" required>
+        <label for="username">Dealer page</label>
+      </div>
+      <div class="input-box">
+        <input type="text" id="password" required>
+        <label for="password">First Name</label>
+      </div>
+      <div class="input-box">
+        <input type="text" id="password" required>
+        <label for="password">Last Name</label>
+      </div>
+      
+      <div class="input-box">
+        <input type="text" id="password" required>
+        <label for="password">Email</label>
+      </div>
+      <div class="input-box">
+        <input type="number" id="password" required>
+        <label for="password">Phone</label>
+      </div>
+      
+       -->          <!-- <div class="msg">
+            <textarea placeholder="How can we help you ?"></textarea>
+             <button class="submit-button">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Submit
+      </button>
+    
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+        
+ -->
+    
+            
+               
+
+	<!-- <div class="contact" id="contact">
+			<div class="container">
+			<h3>Contact us</h3>
+			<p>if you have any question, please contact us:)</p>
+				<div class="input-box">
+        <input type="text" id="username" required>
+        <label for="username">Dealer page</label>
+      </div>
+      <div class="input-box">
+        <input type="text" id="password" required>
+        <label for="password">First Name</label>
+      </div>
+      <div class="input-box">
+        <input type="text" id="password" required>
+        <label for="password">Last Name</label>
+      </div>
+      
+      <div class="input-box">
+        <input type="text" id="password" required>
+        <label for="password">Email</label>
+      </div>
+      <div class="input-box">
+        <input type="number" id="password" required>
+        <label for="password">Phone</label>
+      </div> -->
+      
+<!--       <div class="msg">
+            <textarea placeholder="How can we help you ?"></textarea>
+             <button class="submit-button">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Submit
+      </button>
+    
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+    </div>
+</div>
+      </div> -->		
+
+
+
+
+
+
+
+      			<!-- <div class="msg">
+            <textarea placeholder="How can we help you ?"></textarea>
+						 <button class="submit-button">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Submit
+      </button>
+    
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div> -->
+		    
+
+
+
+
+
+
+
+
+</body>
+</html>
